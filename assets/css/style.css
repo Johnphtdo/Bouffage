@@ -1,0 +1,29 @@
+body {
+    background-image: url(../images/food_back07.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logoimage {
+    padding-right: 60px;
+    margin: 0 auto;
+}
+
+.button-area {
+    margin-bottom: 50%;
+}
+
+.btn {
+    width: 10em;
+    height: 10em;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 2em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    text-align: center;
+    border: 2px solid orange;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
