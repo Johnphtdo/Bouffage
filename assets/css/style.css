@@ -4,6 +4,10 @@ body {
     background-size: cover;
 }
 
+.button-area {
+    margin-top: 30%;
+}
+
 .btn {
     width: 10em;
     height: 10em;
