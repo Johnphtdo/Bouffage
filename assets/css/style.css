@@ -4,8 +4,13 @@ body {
     background-size: cover;
 }
 
+.logoimage {
+    padding-right: 60px;
+    margin: 0 auto;
+}
+
 .button-area {
-    margin-top: 30%;
+    margin-bottom: 50%;
 }
 
 .btn {
