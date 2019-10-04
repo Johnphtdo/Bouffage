@@ -8,6 +8,7 @@ var foodDiet = "alcohol-free"
 var foodAllergies = "peanuts"
 
 var foodQueryUrl = foodUrl +"?q="+ foodItem +  "&mealType=" +  foodTimeFrame +  "&calories=" +  foodCal +  "&health=" +  foodDiet +  "&excluded=" +  foodAllergies + foodAPI;
+
 console.log(foodQueryUrl)
 
   $.ajax({
