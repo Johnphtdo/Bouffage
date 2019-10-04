@@ -1,29 +1,78 @@
-body {
+/* * {
+    border: 2px dotted white;
+} */
+
+body, html {
+    height:100%;
+    background-color: black;
+}
+
+#background {
     background-image: url(../images/food_back07.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+    background-position: center;
+    overflow: auto;
+}
+
+.row-index{
+    height: 30%;
+    padding: 3em 0 3em 0;
 }
 
 .logoimage {
-    padding-right: 60px;
     margin: 0 auto;
-}
-
-.button-area {
-    margin-bottom: 50%;
+    
 }
 
 .btn {
-    width: 10em;
-    height: 10em;
+    width: 8em;
+    height: 8em;
     background-color: rgba(255, 255, 255, 0.75);
     border-radius: 2em;
-    padding-top: 4em;
-    padding-bottom: 4em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     text-align: center;
     border: 2px solid orange;
+    font-size: 2em;
 }
 
 .btn:hover {
     background-color: rgba(255, 255, 255, 0.9);
+}
+
+.card-title {
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    
+}
+
+.card {
+    border: 1px solid orange;
+}
+
+.card-img-overlay {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+.fas, .fal {
+    font-size: 3em;
+}
+
+#quote {
+    color: ghostwhite;
+    text-shadow: .04em .04em black, -.65px -.65px black;
+    font-size: 3em;
+    font-family: 'Nothing You Could Do', cursive;
+    /* margin-bottom: 3em; */
 }
