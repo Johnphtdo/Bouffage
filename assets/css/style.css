@@ -2,7 +2,7 @@
 body, html {
     height:100%;
     background-color: black;
-    overflow: scroll;
+
 }
 
 #background {
@@ -13,6 +13,7 @@ body, html {
     width: 100%;
     position: fixed;
     background-position: center;
+    overflow: scroll;
 }
 
 .header {
