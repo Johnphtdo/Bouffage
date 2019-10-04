@@ -38,9 +38,10 @@
                     <div class="form">
                     
                         <p>Calories</p>
-                    
-                        <input type="range" class="custom-range" min="500" max="1500" id="customRange2">
-                    
+
+         
+                        <input type="range" name="calorieInputName" class="custom-range" min="500" max="3500" step="50" value="1000" id="calorieRange" oninput="calorieOutputId.value = calorieRange.value">
+                        <output name="calorieOutputName" id="calorieOutputId">1000</output>                       
                         <br>
                         <br>
                     

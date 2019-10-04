@@ -13,7 +13,11 @@ body, html {
     width: 100%;
     position: fixed;
     background-position: center;
-    /* overflow: auto; */
+}
+
+.header {
+    padding-left: 1em;
+    padding-top: 1em;
 }
 
 .row-index{
@@ -50,12 +54,15 @@ body, html {
 
 .card {
     border: 1px solid orange;
+    padding: 0;
 }
 
 .card-img-overlay {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .fas, .fal {
