@@ -5,40 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+    <script src="https://kit.fontawesome.com/4cb2161575.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
     <script type="text/javascript" src="./assets/javascript/visual.js" defer></script>
-    <script src="drink.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/javascript/drink.js" defer></script>
+    <script src="./assets/javascript/food.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
 
 </head>
-<body id="background">
-    
-    <div class="container text-center">
-            <div class="logoimage">
-                    <img src="assets/images/BOUFFAGELOGO.png">
-              </div>
+<body >
+    <div id="background">
 
-
-        <div class="button-area align-middle">
-            <a href="food.html">
-                <div class="btn mr-3" id="btn-food">Food</div>
-            </a>
-            <a href="drink.html">
-                <div class="btn ml-3" id="btn-drink">Drink</div>
-            </a>
-            
+        <div class="container text-center ">
+            <div class="row row-index">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <div class="logoimage">
+                        <img class="img-fluid" src="./assets/images/BOUFFAGELOGO.png">
+                    </div>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+            <div class="row row-index">
+                <div class="col-sm-12">
+                    <div class="button-area text-center">
+                        <a href="food.html">
+                            <div class="btn mr-3 shadow-lg" id="btn-food">
+                                <p class="mb-5">Hungry?</p>
+                                <i class="fal fa-turkey"></i>
+                            </div>
+                        </a>
+                        <a href="drink.html">
+                            <div class="btn ml-3 shadow-lg" id="btn-drink">
+                                <p class="mb-5">Thirsty?</p>
+                                <i class="fas fa-cocktail"></i>
+                            </div>
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-index align-middle">
+                <div class="col-sm-12">
+                <div class="blockquote text-white text-center ">
+                    <p id="quote"></p>
+                </div>
+                </div>
+            </div>
         </div>
-        
+
     </div>
+    
   
   
   
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
