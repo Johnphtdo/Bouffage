@@ -19,13 +19,22 @@ console.log(foodQueryUrl)
 
     var foodName = foodInfo[0].recipe.label
     var foodImg = foodInfo[0].recipe.image
-    var recipeUrl = foodInfo[0].recipe.url
+    var recipeUrl = $(`<a href="">Recipe Link</a>`)
+    recipeUrl.attr("href",foodInfo[0].recipe.url)
     var yield = foodInfo[0].recipe.yield
     var calCount = foodInfo[0].recipe.calories
+    var ingredients = foodInfo[0].recipe.ingredientLines
+    console.log(ingredients)
+
+
 
     $(`.food-name`).text(foodName)
     $(`.foodImg`).attr("src",foodImg)
-    $(`.food-info`).html(recipeUrl)
+    for (let i = 0; i < ingredients.length; i++) {
+      var itemList = $(`<li>`+ingredients[i]+`</li>`)
+      $(`.food-info`).append(itemList)
+ }  
+    $(`.food-info`).append(recipeUrl)
     console.log(foodImg)
   })
 
