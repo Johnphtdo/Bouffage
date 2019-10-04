@@ -7,7 +7,7 @@ var foodCal = 1500;
 var foodDiet = "vegetarian"
 var foodAllergies = "peanuts"
 
-var foodQueryUrl = foodUrl +"?q="+ foodItem +  "&mealType=" +  foodTimeFrame +  "&calories=" +  foodCal +  "&health=" +  foodDiet +  "&excluded" +  foodAllergies + foodAPI;
+var foodQueryUrl = foodUrl +"?q="+ foodItem +  "&mealType=" +  foodTimeFrame +  "&calories=" +  foodCal +  "&health=" +  foodDiet +  "&excluded=" +  foodAllergies + foodAPI;
 
 
   $.ajax({
