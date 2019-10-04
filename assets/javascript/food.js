@@ -15,22 +15,20 @@ console.log(foodQueryUrl)
     method: "GET"
   }).then(function(response) {
     for (let i = 0; i < 3; i++) {
+      // Setting variables for the information that we want to use in the response
     var foodInfo = response.hits
     var foodName = foodInfo[i].recipe.label
     var foodImg = foodInfo[i].recipe.image
     var recipeUrl = $(`<a href="">Recipe Link</a>`)
     recipeUrl.attr("href",foodInfo[i].recipe.url)
     var foodYield = foodInfo[i].recipe.yield
-    var calCount = foodInfo[i].recipe.calories
+    var calCount = Math.round(foodInfo[i].recipe.calories)
     var ingredients = foodInfo[i].recipe.ingredientLines
     
     
-    
+    // Pushing the information from the API into the HTML
     $(`#food-name${[i]}`).text(foodName)
     $(`#foodImg${[i]}`).attr("src",foodImg)
-
-
-
     $(`#food-info${[i]}`).append("Serving Size: "+foodYield+`<br>`)
     $(`#food-info${[i]}`).append("Total Calories: "+calCount+`<hr>`)
     for (let j = 0; j < ingredients.length; j++) {
