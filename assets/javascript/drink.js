@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 
     $("#drinkchoicebtn").on("click", function (event) {
