@@ -70,44 +70,26 @@ body, html {
 }
 
 
-.foodform {
+.form {
     border-style: solid;
-    border-width: 10px;
+    border-width: .3em;
     border-color: lightgray;
-    border-radius: 10px;
+    border-radius: 2em;
     background-color: orange;
-    padding-bottom: 40px;
-    padding-top: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
     vertical-align: middle;
-    width: 420px;
-    float: left;
-}
-
-p {
-    padding-left: 10px;
+    margin-left:1em;
+    /* width: 420px;
+    float: left; */
 }
 
 .generate {
     text-align: center;
 }
 
-
-.drinkform {
-        border-style: solid;
-        border-width: 10px;
-        border-color: lightgray;
-        border-radius: 10px;
-        background-color: orange;
-        padding-bottom: 40px;
-        padding-top: 40px;
-        padding-left: 10px;
-        padding-right: 10px;
-        vertical-align: middle;
-        width: 420px;
-        float: left;
-    }
 
 .drinkchoice {
 }
