@@ -14,10 +14,11 @@ body, html {
     height: 100%;
     width: 100%;
     position: fixed;
-    top: 0;
+    /* top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 0; */
+    background-position: center;
     overflow: auto;
 }
 
@@ -45,6 +46,23 @@ body, html {
 
 .btn:hover {
     background-color: rgba(255, 255, 255, 0.9);
+}
+
+.card-title {
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    
+}
+
+.card {
+    border: 1px solid orange;
+}
+
+.card-img-overlay {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
 }
 
 .fas, .fal {
