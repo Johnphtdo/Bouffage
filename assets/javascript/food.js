@@ -14,28 +14,36 @@ console.log(foodQueryUrl)
     url: foodQueryUrl,
     method: "GET"
   }).then(function(response) {
+    for (let i = 0; i < 3; i++) {
     var foodInfo = response.hits
-    console.log(foodInfo)
-
-    var foodName = foodInfo[0].recipe.label
-    var foodImg = foodInfo[0].recipe.image
+    var foodName = foodInfo[i].recipe.label
+    var foodImg = foodInfo[i].recipe.image
     var recipeUrl = $(`<a href="">Recipe Link</a>`)
-    recipeUrl.attr("href",foodInfo[0].recipe.url)
-    var yield = foodInfo[0].recipe.yield
-    var calCount = foodInfo[0].recipe.calories
-    var ingredients = foodInfo[0].recipe.ingredientLines
-    console.log(ingredients)
+    recipeUrl.attr("href",foodInfo[i].recipe.url)
+    var foodYield = foodInfo[i].recipe.yield
+    var calCount = foodInfo[i].recipe.calories
+    var ingredients = foodInfo[i].recipe.ingredientLines
+    
+    
+    
+    $(`#food-name${[i]}`).text(foodName)
+    $(`#foodImg${[i]}`).attr("src",foodImg)
 
 
 
-    $(`.food-name`).text(foodName)
-    $(`.foodImg`).attr("src",foodImg)
-    for (let i = 0; i < ingredients.length; i++) {
-      var itemList = $(`<li>`+ingredients[i]+`</li>`)
-      $(`.food-info`).append(itemList)
- }  
-    $(`.food-info`).append(recipeUrl)
-    console.log(foodImg)
+    $(`#food-info${[i]}`).append("Serving Size: "+foodYield+`<br>`)
+    $(`#food-info${[i]}`).append("Total Calories: "+calCount+`<hr>`)
+    for (let j = 0; j < ingredients.length; j++) {
+      var itemList = $(`<li>`+ingredients[j]+`</li>`)
+      $(`#food-info${[i]}`).append(itemList)
+    }  
+    $(`#food-info${[i]}`).append(recipeUrl)
+    
+    // Testing and debugging
+  //   console.log(foodInfo)
+  //   console.log(ingredients)
+  //   console.log(foodImg)
+  }
   })
 
 

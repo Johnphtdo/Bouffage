@@ -19,8 +19,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
 </head>
 
-<body>
-    <div  id="background">
+<body id="background">
+
     <div class="header">
         <img src="assets/images/BOUFFAGELOGO.png" style="width: 250px;height: 100px;">
     </div>
@@ -38,16 +38,15 @@
                     <div class="form">
                     
                         <p>Calories</p>
-
-         
-                        <input type="range" name="calorieInputName" class="custom-range" min="500" max="3500" step="50" value="1000" id="calorieRange" oninput="calorieOutputId.value = calorieRange.value">
-                        <output name="calorieOutputName" id="calorieOutputId">1000</output>                       
+                    
+                        <input type="range" class="custom-range" min="500" max="1500" id="customRange2">
+                    
                         <br>
                         <br>
                     
                         <p>Meal Type</p>
                     
-                        <select class="form-control form-control-lg" id="mealtypes">
+                        <select class="form-control form-control-lg">
                             <option>Lunch</option>
                             <option>Breakfast</option>
                             <option>Dinner</option>
@@ -58,7 +57,7 @@
                     
                         <p>Diet</p>
                     
-                        <select class="form-control form-control-lg" id="diettypes">
+                        <select class="form-control form-control-lg">
                             <option>Balanced</option>
                         </select>
                     
@@ -66,7 +65,7 @@
                     
                         <p>Health</p>
                     
-                        <select class="form-control form-control-lg" id="healthtypes">
+                        <select class="form-control form-control-lg">
                             <option>Vegetarian</option>
                             <option>Non-Vegetarian</option>
                         </select>
@@ -75,7 +74,7 @@
                     
                         <p>Allergens</p>
                     
-                        <select class="form-control form-control-lg" id="allergentypes">
+                        <select class="form-control form-control-lg">
                             <option>None</option>
                             <option>Peanuts</option>
                         </select>
@@ -95,33 +94,32 @@
                     <div class="food-area text-center d-flex flex-row justify-content-center flex-wrap">
 
                             <div class="col-sm-3 card m-1 meal" >
-                                <img class="img-fluid foodImg" id="foodImg0" src="./assets/images/food_frenchtoast.jpg" class="card-img-top" alt="french toast">
+                                <img class="img-fluid foodImg" src="./assets/images/food_frenchtoast.jpg" class="card-img-top" alt="french toast">
                                 <div class="card-img-overlay">
-                                    <h5 class="card-title text-white food-name" id="food-name0">Blueberry French Toast</h5>
+                                    <h5 class="card-title text-white food-name">Blueberry French Toast</h5>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text food-info" id="food-info0">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-3 card m-1 meal" >
-                                <img class="img-fluid foodImg" id="foodImg1"  src="./assets/images/food_double_burger.jpg" class="card-img-top" alt="double cheeseburger">
-                                <div class="card-img-overlay">
-                                    <h5 class="card-title text-white food-name" id="food-name1">Double Cheeseburger</h5>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text food-info" id="food-info1" >Some quick example text to build on the card title and make up the bulk of the card's
+                                    <p class="card-text food-info">Some quick example text to build on the card title and make up the bulk of the card's
                                         content.</p>
                                 </div>
                             </div>
                             <div class="col-sm-3 card m-1 meal" >
-                                <img class="img-fluid foodImg" id="foodImg2" src="./assets/images/food_chicken_soup.jpg" class="card-img-top" alt="chicken soup">
+                                <img class="img-fluid foodImg"  src="./assets/images/food_double_burger.jpg" class="card-img-top" alt="double cheeseburger">
                                 <div class="card-img-overlay">
-                                    <h5 class="card-title text-white food-name" id="food-name2">Chicken Noodle Soup</h5>
+                                    <h5 class="card-title text-white food-name">Double Cheeseburger</h5>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text food-info" id="food-info2">Some quick example text to build on the card title and make up the bulk of the card's
+                                    <p class="card-text food-info">Some quick example text to build on the card title and make up the bulk of the card's
+                                        content.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 card m-1 meal" >
+                                <img class="img-fluid foodImg" src="./assets/images/food_chicken_soup.jpg" class="card-img-top" alt="chicken soup">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title text-white food-name">Chicken Noodle Soup</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text food-info">Some quick example text to build on the card title and make up the bulk of the card's
                                         content.</p>
                                 </div>
                             </div>
@@ -137,7 +135,6 @@
         
         
 
-    </div>
     </div>
 
 
