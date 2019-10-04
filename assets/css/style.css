@@ -1,6 +1,3 @@
-/* * {
-    border: 2px dotted white;
-} */
 
 body, html {
     height:100%;
@@ -70,4 +67,47 @@ body, html {
     font-size: 3em;
     font-family: 'Nothing You Could Do', cursive;
     /* margin-bottom: 3em; */
+}
+
+
+.foodform {
+    border-style: solid;
+    border-width: 10px;
+    border-color: lightgray;
+    border-radius: 10px;
+    background-color: orange;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
+    width: 420px;
+    float: left;
+}
+
+p {
+    padding-left: 10px;
+}
+
+.generate {
+    text-align: center;
+}
+
+
+.drinkform {
+        border-style: solid;
+        border-width: 10px;
+        border-color: lightgray;
+        border-radius: 10px;
+        background-color: orange;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+        vertical-align: middle;
+        width: 420px;
+        float: left;
+    }
+
+.drinkchoice {
 }
