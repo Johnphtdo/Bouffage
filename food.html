@@ -19,13 +19,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
 </head>
 
-<<<<<<< HEAD
-<body id="background">
-
-=======
 <body>
     <div  id="background" >
->>>>>>> 339c770bfa82e9393046dc15cbb233eefaffddce
     <div class="header">
         <img src="assets/images/BOUFFAGELOGO.png" style="width: 250px;height: 100px;">
     </div>
@@ -44,7 +39,7 @@
                     
                         <p>Calories</p>
                     
-                        <input type="range" class="custom-range" min="500" max="1500" id="customRange2">
+                        <input type="range" class="custom-range" min="500" max="2000" id="customRange2">
                     
                         <br>
                         <br>
@@ -112,12 +107,12 @@
                     
                     
                         <div class="generate">
-                            <button type="button" class="btn btn-light">Generate</button>
+                            <button id="foodBtn" type="button" class="btn btn-light">Generate</button>
                         </div>
                     
                     </div>
                 </div>
-                <div class="col-sm-9">
+                <div class="col-sm-9" id="foodCol">
                     
                     <div class="food-area text-center d-flex flex-row justify-content-center flex-wrap">
 
@@ -142,7 +137,7 @@
                             <div class="col-sm-3 card m-1 meal" >
                                 <img class="img-fluid foodImg" id="foodImg2" src="" class="card-img-top" alt="">
                                 <div class="card-img-overlay">
-                                    <h5 class="card-title text-white food-name" id="food-name2">C</h5>
+                                    <h5 class="card-title text-white food-name" id="food-name2"></h5>
                                 </div>
                                 <div class="card-body">
                                     <p class="card-text food-info" id="food-info2"></p>
