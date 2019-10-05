@@ -14,6 +14,7 @@ console.log(foodQueryUrl)
     url: foodQueryUrl,
     method: "GET"
   }).then(function(response) {
+    // For loop to push information into i
     for (let i = 0; i < 3; i++) {
       // Setting variables for the information that we want to use in the response
     var foodInfo = response.hits
