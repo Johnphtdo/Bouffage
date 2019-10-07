@@ -1,6 +1,6 @@
-/* * {
+* {
     border: 1px dotted white;
-} */
+}
 
 body, html {
     height:100%;
@@ -20,23 +20,12 @@ body, html {
 }
 
 #form-background {
-    background-image: linear-gradient(to right, rgba(255, 163, 0, 0) ,rgba(255, 163, 0, 0.6));
-    
+    background-image: linear-gradient(to right, rgba(255, 163, 0, 0) ,rgba(255, 163, 0));
 }
 
 .header {
     padding-left: 1em;
     padding-top: 1em;
-    border-bottom: white;
-    
-}
-
-.row {
-    margin: 0 auto;
-}
-
-#header-container {
-border-bottom: 1px solid white;
 }
 
 .row-index{
@@ -101,6 +90,9 @@ border-bottom: 1px solid white;
     padding-top: 2%;
 }
 
+.row {
+    padding-bottom: 10px;
+}
 
 .form {
     border-style: solid;
@@ -121,9 +113,29 @@ border-bottom: 1px solid white;
     text-align: center;
 }
 
-
 #foodCol{
 
     display: none;
 
+}
+
+.footer {
+    opacity: 0.9;
+    background-color: orange;
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.footerbtnspage {
+    float: left;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+
+.footerbtnsmedia {
+    padding-top: 10px;
+    float: right;
 }
