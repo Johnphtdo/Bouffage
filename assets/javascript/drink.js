@@ -5,13 +5,13 @@ $(document).ready(function () {
         var drinkAPI = "f583c76719msh4620570ef703476p1f33bdjsn9768c87b23c1";
         var drinkUrl = "https://www.thecocktaildb.com/api/json/v1/" + drinkAPI + "/filter.php?"
         var drinkChoice = $("#drinktypeform").children("input:checked").attr("data-drinktype");
-        var liquorType = "Rum";
+        var liquorType = "";
 
 
       
         var drinkQueryUrl = drinkUrl + "a=" + drinkChoice + "&i=" + liquorType;
         console.log(drinkQueryUrl)
-        console.log(drinkAPI)
+   
 
 
         var settings = {
@@ -27,7 +27,17 @@ $(document).ready(function () {
 
         $.ajax(settings).then(function (response) {
             console.log(response);
+            //For loop to push information to i
+            for (let i = 0; i < 3; i++){
+            //Setting variables for the information that we want to use in the respnse 
+            var drinkInfo = response.drinks
+            var drinkName = drinkInfo[i].strDrink
+            var drinkImage = drinkImage[i].strDrinkThumb
+            
+            //Pushing the information from the API into the HTML 
 
+        
+        }
             
         });
 
