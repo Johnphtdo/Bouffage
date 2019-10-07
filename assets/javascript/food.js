@@ -110,20 +110,20 @@ $(document).ready(function() {
 
 $(`#addBtn0`).on("click",function(){
   
-  dailyMeal[0] = mealName0;
+  dailyMeal.push(mealName0)
   sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
 
 })
 $(`#addBtn1`).on("click",function(){
   
-  dailyMeal[1] = mealName1;
+  dailyMeal.push(mealName1)
   sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
 
 })
 $(`#addBtn2`).on("click",function(){
 
   
-  dailyMeal[2] = mealName2;
+  dailyMeal.push(mealName2)
   sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
 
 })
