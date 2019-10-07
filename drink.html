@@ -21,14 +21,35 @@
 
 <body id="background">
         <div id="background">
-            <div class="header">
-                    <img src="assets/images/BOUFFAGELOGO.png" style="width: 250px;height: 100px;">
-                </div>
             
-                <br>
-                <br>
-                <br>
-                
+            <div class="row" id="header-container">
+                <div class="col-sm-3">
+                    <div class="header">
+                        <a href="index.html"><img class="img-fluid" src="assets/images/BOUFFAGELOGO.png"
+                                style="width: 250px;height: 100px;"></a>
+                    </div>
+                </div>
+                <div class="col-sm-9 text-white" id="form-background">
+                    <div class="row drinkchoice pt-4">
+                    
+                        <div class="form-check col-sm-3" id="drinktypeform">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"
+                                data-drinktype="Alcoholic">
+                            <label class="form-check-label" for="inlineRadio1">Alcoholic</label><br>
+                            <input class="form-check-input mb-1" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"
+                                data-drinktype="Non_Alcoholic">
+                            <label class="form-check-label" for="inlineRadio2">Non-Alcholic</label>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control form-control-lg" id="mainIngredient" placeholder="Liquer Type..." required>
+                        </div>
+                        <div class="generate col-sm-3">
+                            <button type="button" class="btn btn-light" id="generate-btn">Generate</button>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        
                 
 
 
@@ -36,40 +57,7 @@
         <div class="text-center" >
 
             <div class="row row-index">
-                <div class="col-sm-3">
-                <div class="form">
-                
-                    <p>Drink Choices</p>
-                
-                    <div class="drinkchoice">
-                
-                        <div class="form-check" id="drinktypeform">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" data-drinktype="Alcoholic">
-                            <label class="form-check-label" for="inlineRadio1">Alcoholic</label><br>
-                            <input class="form-check-input mb-1" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" data-drinktype="Non_Alcoholic">
-                            <label class="form-check-label" for="inlineRadio2">Non-Alcholic</label>
-                        </div>
-                <br>
-                        <div>
-                            <button type="button mt-1" class="btn btn-light" id="drinkchoicebtn">Submit</button>
-                        </div>
-                    </div>
-                    <br>
-
-                    <p>Main Ingredient</p>
-                    <br>
-                    <input type="text" class="form-control form-control-lg" id="mainIngredient" placeholder="Bourbon" required>
-                    
-                    <br>
-                
-                    <br>
-                
-                    <div class="generate">
-                        <button type="button" class="btn btn-light" id="generate-btn">Generate</button>
-                    </div>
-                </div>
-                </div>
-                <div class="col-sm-9">
+                <div class="col-sm-12">
 
                     <div class="food-area text-center d-flex flex-row justify-content-center flex-wrap" id="drinksDiv">
                 
