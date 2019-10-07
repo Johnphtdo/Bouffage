@@ -16,7 +16,7 @@ $(document).ready(function () {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://the-cocktail-db.p.rapidapi.com/filter.php?i=" + liquorType + "&a=" + drinkChoice,
+            "url": "https://the-cocktail-db.p.rapidapi.com/filter.php?i=" + liquorType,
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
@@ -32,12 +32,13 @@ $(document).ready(function () {
             var drinkInfo = response.drinks
             var drinkName = drinkInfo[i].strDrink
             var drinkImage = drinkInfo[i].strDrinkThumb
+            var drinkId = drinkInfo[i].idDrink
+            console.log(drinkId)
             
             //Pushing the information from the API into the HTML 
            var mainDiv = $("<div class='col-sm-3 card m-1 meal drink'>");
            var img = $("<img class='img-fluid drinkImg'>").attr({src: drinkImage, alt: drinkName})
            var nameDiv = $("<h5 class='card-title text-white drinkName'>").text(drinkName).appendTo($("<div class='card-img-overlay'>"))     
-        //    var pTag = $("<p class='card-text drinkInfo'>")
            var cardDiv = $("<div class='card-body'>");
            
            
