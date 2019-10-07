@@ -21,11 +21,22 @@ body, html {
 
 #form-background {
     background-image: linear-gradient(to right, rgba(255, 163, 0, 0) ,rgba(255, 163, 0, 0.6));
+    
 }
 
 .header {
     padding-left: 1em;
     padding-top: 1em;
+    border-bottom: white;
+    
+}
+
+.row {
+    margin: 0 auto;
+}
+
+#header-container {
+border-bottom: 1px solid white;
 }
 
 .row-index{
