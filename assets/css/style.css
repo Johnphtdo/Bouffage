@@ -31,6 +31,8 @@ body, html {
 }
 
 .btn-main {
+    margin: 0;
+    padding: 0;
     width: 7em;
     height: 7em;
     background-color: rgba(255, 255, 255, 0.75);
@@ -68,8 +70,9 @@ body, html {
 }
 
 .fas, .fal {
-    font-size: 2em;
-    padding-top: 0;
+    font-size: 4em;
+    padding-top: .1em;
+    vertical-align: middle;
 }
 
 #quote {
@@ -104,6 +107,4 @@ body, html {
 
     display: none;
 
-}
-.drinkchoice {
 }
