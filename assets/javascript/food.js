@@ -70,6 +70,10 @@ $(document).ready(function() {
         var calCount = Math.round(foodInfo[i].recipe.calories);
         var ingredients = foodInfo[i].recipe.ingredientLines;
 
+        // Creating an Add button for each card
+
+        var addBtn = $(`<br><button type="button" id="addBtn${[i]}">Save Meal</button>`)
+
         // Pushing the information from the API into the HTML
         $(`#food-name${[i]}`).text(foodName);
         $(`#foodImg${[i]}`).attr("src", foodImg);
@@ -80,12 +84,24 @@ $(document).ready(function() {
           $(`#food-info${[i]}`).append(itemList);
         }
         $(`#food-info${[i]}`).append(recipeUrl);
+        $(`#food-info${[i]}`).append(addBtn);
 
-        // Testing and debugging
-        // console.log(foodInfo)
-        // console.log(ingredients)
-        // console.log(foodImg)
-      }
+    // Creating new variables to contain the card info
+    
+    
+    // Testing and debugging
+    // console.log(foodInfo)
+    // console.log(ingredients)
+    // console.log(foodImg)
+  }
+  var cardInfo0 = $(`#food-card0`)
+  var cardInfo1 = $(`#food-card1`)
+  var cardInfo2 = $(`#food-card2`)
+
+  // Testing and debugging
+      console.log(cardInfo0)
+      console.log(cardInfo1)
+      console.log(cardInfo2)
     });
   });
 
