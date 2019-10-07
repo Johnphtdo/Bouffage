@@ -21,13 +21,23 @@
 
 <body id="background">
         <div id="background">
-            <div class="header">
-                <a href="./index.html"><img src="assets/images/BOUFFAGELOGO.png" style="width: 250px;height: 100px;"></a>
+            
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="header">
+                        <a href="index.html"><img class="img-fluid" src="assets/images/BOUFFAGELOGO.png"
+                                style="width: 250px;height: 100px;"></a>
+                    </div>
+                </div>
+                <div class="col-sm-9 text-white" id="form-background">
+                    FORM GOES HERE
+                </div>
             </div>
-        
-            <br>
-            <br>
-            <br>
+            
+            
+                <br>
+                <br>
+                <br>
                 
                 
 
@@ -49,57 +59,23 @@
                             <input class="form-check-input mb-1" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" data-drinktype="Non_Alcoholic">
                             <label class="form-check-label" for="inlineRadio2">Non-Alcholic</label>
                         </div>
-                
+                <br>
                         <div>
                             <button type="button mt-1" class="btn btn-light" id="drinkchoicebtn">Submit</button>
                         </div>
                     </div>
-                
-                
                     <br>
+
+                    <p>Main Ingredient</p>
                     <br>
-                
-                    <p>Meal Type</p>
-                
-                    <select class="form-control form-control-lg">
-                        <option>Lunch</option>
-                        <option>Breakfast</option>
-                        <option>Dinner</option>
-                        <option>Snack</option>
-                    </select>
-                
+                    <input type="text" class="form-control form-control-lg" id="mainIngredient" placeholder="Bourbon" required>
+                    
                     <br>
                 
-                    <p>Diet</p>
-                
-                    <select class="form-control form-control-lg">
-                        <option>Balanced</option>
-                    </select>
-                
                     <br>
-                
-                    <p>Health</p>
-                
-                    <select class="form-control form-control-lg">
-                        <option>Vegetarian</option>
-                        <option>Non-Vegetarian</option>
-                    </select>
-                
-                    <br>
-                
-                    <p>Allergens</p>
-                
-                    <select class="form-control form-control-lg">
-                        <option>None</option>
-                        <option>Peanuts</option>
-                    </select>
-                
-                    <br>
-                    <br>
-                
                 
                     <div class="generate">
-                        <button type="button" class="btn btn-light">Generate</button>
+                        <button type="button" class="btn btn-light" id="generate-btn">Generate</button>
                     </div>
                 </div>
                 </div>
@@ -108,7 +84,7 @@
                     <div class="food-area text-center d-flex flex-row justify-content-center flex-wrap">
                 
                         
-                        <div class="col-sm-3 card m-1 meal drink rounded-top">
+                        <div class="col-sm-3 card m-1 meal drink">
                             <img class="img-fluid drinkImg" id="drinkImg0" src="./assets/images/drink_whiskey.jpg" class="card-img-top"
                                 alt="the winterized penicillin">
                             <div class="card-img-overlay">

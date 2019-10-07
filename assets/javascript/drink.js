@@ -8,9 +8,10 @@ $(document).ready(function () {
         var liquorType = "Rum";
 
 
-        //+  + 
+      
         var drinkQueryUrl = drinkUrl + "a=" + drinkChoice + "&i=" + liquorType;
         console.log(drinkQueryUrl)
+        console.log(drinkAPI)
 
 
         var settings = {
@@ -26,6 +27,8 @@ $(document).ready(function () {
 
         $.ajax(settings).then(function (response) {
             console.log(response);
+
+            
         });
 
 

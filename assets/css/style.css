@@ -1,3 +1,6 @@
+/* * {
+    border: 1px dotted white;
+} */
 
 body, html {
     height:100%;
@@ -16,6 +19,10 @@ body, html {
     overflow: scroll;
 }
 
+#form-background {
+    background-image: linear-gradient(to right, rgba(255, 163, 0, 0) ,rgba(255, 163, 0, 0.6));
+}
+
 .header {
     padding-left: 1em;
     padding-top: 1em;
@@ -31,6 +38,8 @@ body, html {
 }
 
 .btn-main {
+    margin: 0;
+    padding: 0;
     width: 7em;
     height: 7em;
     background-color: rgba(255, 255, 255, 0.75);
@@ -68,8 +77,9 @@ body, html {
 }
 
 .fas, .fal {
-    font-size: 2em;
-    padding-top: 0;
+    font-size: 4em;
+    padding-top: .1em;
+    vertical-align: middle;
 }
 
 #quote {
@@ -100,10 +110,9 @@ body, html {
     text-align: center;
 }
 
+
 #foodCol{
 
     display: none;
 
-}
-.drinkchoice {
 }
