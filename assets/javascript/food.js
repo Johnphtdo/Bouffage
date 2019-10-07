@@ -9,32 +9,37 @@ $(document).ready(function() {
     var foodAPI = "&app_id=$b64e001c&app_key=$8203f05bcefbb343beaae6139be4661d";
     var foodItem = $(`#mainIngredient`)
       .val()
-      .trim();
+      .trim()
+      .toLowerCase();
     var foodTimeFrame = $(`#mealTypes`)
       .val()
-      .trim();
+      .trim()
+      .toLowerCase();
     var foodCal = `500-${$(`#customRange2`)
       .val()
       .trim()}`;
     var foodDiet = $(`#dietTypes`)
       .val()
-      .trim();
+      .trim()
+      .toLowerCase();
     var foodHealth = "";
     if ($(`#healthTypes` == "none")) {
       foodHealth = "alcohol-free";
     } else {
       foodHealth = $(`#healthTypes`)
         .val()
-        .trim();
+        .trim()
+        .toLowerCase();
     }
 
     var foodAllergies = $(`#allergenTypes`)
       .val()
-      .trim();
+      .trim()
+      .toLowerCase();
 
     var foodQueryUrl =
       foodUrl +
-      "?q=" +
+      "?to=25&q=" +
       foodItem +
       "&mealType=" +
       foodTimeFrame +
@@ -59,7 +64,7 @@ $(document).ready(function() {
         var foodInfo = response.hits;
         var foodName = foodInfo[i].recipe.label;
         var foodImg = foodInfo[i].recipe.image;
-        var recipeUrl = $(`<br> <a href="" target="_blank">Recipe Link</a>`);
+        var recipeUrl = $(`<hr> <a href="" target="_blank">Recipe Link</a>`);
         recipeUrl.attr("href", foodInfo[i].recipe.url);
         var foodYield = foodInfo[i].recipe.yield;
         var calCount = Math.round(foodInfo[i].recipe.calories);
@@ -83,4 +88,6 @@ $(document).ready(function() {
       }
     });
   });
+
+
 });
