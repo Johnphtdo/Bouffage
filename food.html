@@ -22,7 +22,7 @@
 <body>
     <div  id="background" >
     <div class="header">
-        <img src="assets/images/BOUFFAGELOGO.png" style="width: 250px;height: 100px;">
+        <a href="./index.html"><img src="assets/images/BOUFFAGELOGO.png" style="width: 250px;height: 100px;"></a>
     </div>
 
     <br>
@@ -38,16 +38,21 @@
                     <div class="form">
                     
                         <p>Calories</p>
-
-         
-                        <input type="range" name="calorieInputName" class="custom-range" min="500" max="3500" step="50" value="1000" id="calorieRange" oninput="calorieOutputId.value = calorieRange.value">
-                        <output name="calorieOutputName" id="calorieOutputId">1000</output>                       
-                        <br>
-                        <br>
                     
+                        <input type="range" class="custom-range" min="500" max="2000" id="customRange2">
+                    
+                        <br>
+                        <br>
+
+                        <p>Main Ingredient</p>
+
+                        <input type ="text" class="form-control form-control-lg" id="mainIngredient" placeholder="Salmon" required>
+                        
+                        <br>
+
                         <p>Meal Type</p>
                     
-                        <select class="form-control form-control-lg" id="mealtypes">
+                        <select class="form-control form-control-lg" id="mealTypes" required>
                             <option>Lunch</option>
                             <option>Breakfast</option>
                             <option>Dinner</option>
@@ -58,26 +63,43 @@
                     
                         <p>Diet</p>
                     
-                        <select class="form-control form-control-lg" id="diettypes">
+                        <select class="form-control form-control-lg" id="dietTypes" required>
                             <option>Balanced</option>
+                            <option>High-Fiber</option>
+                            <option>High-Protein</option>
+                            <option>Low-Carb</option>
+                            <option>Low-Fat</option>
+                            <option>Low-Sodium</option>
                         </select>
                     
                         <br>
                     
                         <p>Health</p>
                     
-                        <select class="form-control form-control-lg" id="healthtypes">
+                        <select class="form-control form-control-lg" id="healthTypes" required>
+                            <option>None</option>
+                            <option>Keto</option>
+                            <option>Kosher</option>
+                            <option>Pescatarian</option>
+                            <option>Paleo</option>
+                            <option>Vegan</option>
                             <option>Vegetarian</option>
-                            <option>Non-Vegetarian</option>
                         </select>
                     
                         <br>
                     
                         <p>Allergens</p>
                     
-                        <select class="form-control form-control-lg" id="allergentypes">
+                        <select class="form-control form-control-lg" id="allergenTypes" required>
                             <option>None</option>
+                            <option>Egg</option>
+                            <option>Fish</option>
+                            <option>Milk</option>
                             <option>Peanuts</option>
+                            <option>Shellfish</option>
+                            <option>Soy</option>
+                            <option>Tree Nuts</option>
+                            <option>Wheat</option>
                         </select>
                     
                         <br>
@@ -85,12 +107,12 @@
                     
                     
                         <div class="generate">
-                            <button type="button" class="btn btn-light">Generate</button>
+                            <button id="foodBtn" type="button" class="btn btn-light">Generate</button>
                         </div>
                     
                     </div>
                 </div>
-                <div class="col-sm-9">
+                <div class="col-sm-9" id="foodCol">
                     
                     <div class="food-area text-center d-flex flex-row justify-content-center flex-wrap">
 
@@ -102,7 +124,6 @@
                                 <div class="card-body">
                                     <p class="card-text food-info" id="food-info0"></p>
                                 </div>
-
                             </div>
                             <div class="col-sm-3 card m-1 meal" >
                                 <img class="img-fluid foodImg" id="foodImg1"  src="" class="card-img-top" alt="">
@@ -116,7 +137,7 @@
                             <div class="col-sm-3 card m-1 meal" >
                                 <img class="img-fluid foodImg" id="foodImg2" src="" class="card-img-top" alt="">
                                 <div class="card-img-overlay">
-                                    <h5 class="card-title text-white food-name" id="food-name2">C</h5>
+                                    <h5 class="card-title text-white food-name" id="food-name2"></h5>
                                 </div>
                                 <div class="card-body">
                                     <p class="card-text food-info" id="food-info2"></p>
@@ -134,7 +155,6 @@
         
         
 
-    </div>
     </div>
 
 
