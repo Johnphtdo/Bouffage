@@ -23,105 +23,106 @@
     <div  id="background" >
     
     
-        <div class="row">
+      
+        <div class="row" id="header-container">
             <div class="col-sm-3">
                 <div class="header">
                     <a href="index.html"><img class="img-fluid" src="assets/images/BOUFFAGELOGO.png" style="width: 250px;height: 100px;"></a>
                     
                 </div>
             </div>
-            <div class="col-sm-9 text-white" id="form-background">
-                FORM GOES HERE
+            
+            <div class="col-sm-9" id="form-background">
+                
+                <div class="row">
+                    <div class="col-sm-9">
+                    
+                        <div class="row">
+                            <div class="ml-auto col-sm-3 text-white mt-3 mr-2">
+                                <p>Calories</p>
+                    
+                                <input type="range" class="custom-range" min="500" max="2000" id="customRange2">
+                            </div>
+                            <div class="col-sm-3 text-white mt-3 mr-2">
+                                <p>Main Ingredient</p>
+                    
+                                <input type="text" class="form-control form-control-lg" id="mainIngredient" placeholder="Salmon" required>
+                            </div>
+                            <div class="col-sm-3 text-white mt-3 mr-2">
+                                <p>Meal Type</p>
+                    
+                                <select class="form-control form-control-lg" id="mealTypes" required>
+                                    <option>Lunch</option>
+                                    <option>Breakfast</option>
+                                    <option>Dinner</option>
+                                    <option>Snack</option>
+                                </select>
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class=" ml-auto col-sm-3 text-white mt-3 mr-2">
+                                <p>Diet</p>
+                    
+                                <select class="form-control form-control-lg" id="dietTypes" required>
+                                    <option>Balanced</option>
+                                    <option>High-Fiber</option>
+                                    <option>High-Protein</option>
+                                    <option>Low-Carb</option>
+                                    <option>Low-Fat</option>
+                                    <option>Low-Sodium</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3 text-white mt-3 mr-2">
+                                <p>Health</p>
+                    
+                                <select class="form-control form-control-lg" id="healthTypes" required>
+                                    <option>None</option>
+                                    <option>Keto</option>
+                                    <option>Kosher</option>
+                                    <option>Pescatarian</option>
+                                    <option>Paleo</option>
+                                    <option>Vegan</option>
+                                    <option>Vegetarian</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3 text-white mt-3 mr-2">
+                                <p>Allergens</p>
+                    
+                                <select class="form-control form-control-lg" id="allergenTypes" required>
+                                    <option>None</option>
+                                    <option>Egg</option>
+                                    <option>Fish</option>
+                                    <option>Milk</option>
+                                    <option>Peanuts</option>
+                                    <option>Shellfish</option>
+                                    <option>Soy</option>
+                                    <option>Tree Nuts</option>
+                                    <option>Wheat</option>
+                                </select>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="col-md-2 mt-3 text-white p-0">
+                        <div class="generate pt-5 pb-5 mt-5">
+                            <button id="foodBtn" type="button" class="btn btn-light">Generate</button>
+                        </div>
+                    </div>
+                </div>
+                
+                        
             </div>
+            
         </div>
-
-    <br>
-    <br>
-    <br>
 
     
     <div class="text-center">
         
             
             <div class="row row-index">
-                <div class="col-sm-3">
-                    <div class="form">
-                    
-                        <p>Calories</p>
-                    
-                        <input type="range" class="custom-range" min="500" max="2000" id="customRange2">
-                    
-                        <br>
-                        <br>
-
-                        <p>Main Ingredient</p>
-
-                        <input type ="text" class="form-control form-control-lg" id="mainIngredient" placeholder="Salmon" required>
-                        
-                        <br>
-
-                        <p>Meal Type</p>
-                    
-                        <select class="form-control form-control-lg" id="mealTypes" required>
-                            <option>Lunch</option>
-                            <option>Breakfast</option>
-                            <option>Dinner</option>
-                            <option>Snack</option>
-                        </select>
-                    
-                        <br>
-                    
-                        <p>Diet</p>
-                    
-                        <select class="form-control form-control-lg" id="dietTypes" required>
-                            <option>Balanced</option>
-                            <option>High-Fiber</option>
-                            <option>High-Protein</option>
-                            <option>Low-Carb</option>
-                            <option>Low-Fat</option>
-                            <option>Low-Sodium</option>
-                        </select>
-                    
-                        <br>
-                    
-                        <p>Health</p>
-                    
-                        <select class="form-control form-control-lg" id="healthTypes" required>
-                            <option>None</option>
-                            <option>Keto</option>
-                            <option>Kosher</option>
-                            <option>Pescatarian</option>
-                            <option>Paleo</option>
-                            <option>Vegan</option>
-                            <option>Vegetarian</option>
-                        </select>
-                    
-                        <br>
-                    
-                        <p>Allergens</p>
-                    
-                        <select class="form-control form-control-lg" id="allergenTypes" required>
-                            <option>None</option>
-                            <option>Egg</option>
-                            <option>Fish</option>
-                            <option>Milk</option>
-                            <option>Peanuts</option>
-                            <option>Shellfish</option>
-                            <option>Soy</option>
-                            <option>Tree Nuts</option>
-                            <option>Wheat</option>
-                        </select>
-                    
-                        <br>
-                        <br>
-                    
-                    
-                        <div class="generate">
-                            <button id="foodBtn" type="button" class="btn btn-light">Generate</button>
-                        </div>
-                    
-                    </div>
-                </div>
+                
                 <div class="col-sm-9" id="foodCol">
                     
                     <div class="food-area text-center d-flex flex-row justify-content-center flex-wrap">
