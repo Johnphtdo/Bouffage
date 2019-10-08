@@ -23,6 +23,7 @@ p {
     position: fixed;
     background-position: center;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 #form-background {
@@ -57,6 +58,10 @@ padding-bottom: 0;
 
 .btn-text:hover {
     text-decoration: none;
+}
+
+#saved-meal-list {
+    text-shadow: 2px 2px black;
 }
 
 .btn-main {
