@@ -215,6 +215,9 @@ padding-bottom: 0;
 }
 
 .card {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 18px;
     width: 25%;
     float: left;
