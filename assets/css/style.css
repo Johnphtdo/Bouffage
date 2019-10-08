@@ -129,7 +129,6 @@ padding-bottom: 0;
 }
 
 .footer {
-    opacity: 0.6;
     /* background-color: orange; */
     height: 70px;
     width: 100%;
@@ -155,7 +154,7 @@ padding-bottom: 0;
 }
 
 .abouttext {
-
+    font-size: 18px;
     padding-left: 1em;
     padding-bottom: 1em;
 
@@ -186,8 +185,13 @@ padding-bottom: 0;
 }
 
 .card {
+    font-size: 18px;
     width: 25%;
     float: left;
+}
+
+.card-body {
+    padding-top: 0px;
 }
 
 .fab-light{
