@@ -22,16 +22,31 @@
 </head>
 
 <body>
-    <div id="background" >
+    <div  id="background" >
     
     
       
         <div class="row  animated slideInDown" id="header-container">
             <div class="col-sm-3">
-                <div class="header ">
-                    <a href="index.html"><img class="img-fluid" src="assets/images/BOUFFAGELOGO.png" style="width: 250px;height: 100px;"></a>
-                    
+                <div class="row">
+                    <div class="header ">
+                        <a href="index.html"><img class="img-fluid" src="assets/images/BOUFFAGELOGO.png"></a>
+                    </div>
                 </div>
+                <div class="row">
+                    <div class="btn col-sm-5 btn-meals btn-lists mt-2" id="btn-clear">
+                        <p>Clear Meals</p>
+                    </div>
+                </div>
+                <div class=row>
+                    <div class="col-sm-12 text-white" id="saved-meal-list">
+                        <ul id="mealList">
+                            
+                        </ul>
+
+                    </div>
+                </div>
+                
             </div>
             
             <div class="col-sm-9" id="form-background">
@@ -43,7 +58,8 @@
                             <div class="ml-auto col-sm-3 text-white mt-3 mr-2">
                                 <p>Calories</p>
                     
-                                <input type="range" class="custom-range" min="500" max="2000" id="customRange2">
+                                <input type="range" class="custom-range" min="500" value="1800" max="2000" id="customRange2" step="100" oninput="calorieOutputId.value = customRange2.value">
+                                <output name="calorieOutput" id="calorieOutputId">1800</output>
                             </div>
                             <div class="col-sm-3 text-white mt-3 mr-2">
                                 <p>Main Ingredient</p>
@@ -108,7 +124,7 @@
                     </div>
                     
                     <div class="col-md-2 mt-3 text-white p-0">
-                        <div class="generate pt-5 pb-5 mt-5">
+                        <div class="generate pt-5 pb-5 mt-4">
                             <button id="foodBtn" type="button" class="btn btn-light">Generate</button>
                         </div>
                     </div>
@@ -120,10 +136,10 @@
         </div>
 
     
-    <div class="text-center">
+    <div class="text-center flex-shrink-0">
         
             
-            <div class="row row-index">
+            <div class="row row-index main">
                 
                 <div class="col-sm-12" id="foodCol">
                     
@@ -167,7 +183,7 @@
                 </div>
             </div>
 
-            <div class="fixed-bottom">
+            <!-- <div class="footer fixed-bottom mt-auto">
                     <div class="footer">
                             <div class="footerbtnspage">
                             <a href="about.html">
@@ -191,8 +207,9 @@
                             </a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
+        </div>
     </div>
 
 

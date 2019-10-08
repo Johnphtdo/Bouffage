@@ -1,4 +1,4 @@
-// Creating an empty array to contain dailyMeal
+// Creating an empty global array to contain dailyMeal and sessionStorage
 var dailyMeal = [];
 sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
 
@@ -12,7 +12,7 @@ $(document).ready(function() {
     // Prevent the page from refreshing
     event.preventDefault();
 
-    var foodUrl = "https://api.edamam.com/search";
+    var foodUrl = "https://api.edamam.com/search?to=25&q=";
     var foodAPI = "&app_id=$b64e001c&app_key=$8203f05bcefbb343beaae6139be4661d";
     var foodItem = $(`#mainIngredient`)
       .val()
@@ -47,7 +47,6 @@ $(document).ready(function() {
 
     var foodQueryUrl =
       foodUrl +
-      "?to=25&q=" +
       foodItem +
       "&mealType=" +
       foodTimeFrame +
@@ -96,12 +95,13 @@ $(document).ready(function() {
         $(`#food-info${[i]}`).append(recipeUrl);
         $(`#food-info${[i]}`).append(addBtn);
 
-        // Creating new variables to contain the card info
+
         // Testing and debugging
         // console.log(foodInfo)
         // console.log(ingredients)
         // console.log(foodImg)
       }
+
       var cardInfo0 = $(`#food-card0`);
       var cardInfo1 = $(`#food-card1`);
       var cardInfo2 = $(`#food-card2`);
@@ -112,4 +112,58 @@ $(document).ready(function() {
       console.log(cardInfo2);
     });
   });
+
+      // Creating new variables to contain the card info
+      var mealName0 = $(`#food-name0`)[0].innerText;
+      var mealName1 = $(`#food-name1`)[0].innerText;
+      var mealName2 = $(`#food-name2`)[0].innerText;
+
+      // Testing and debugging
+      // console.log(mealName0);
+      // console.log(mealName1);
+      // console.log(mealName2);
+
+
+      // Buttons to get dailyMeal from sessionStorage, push the information, and save back into storage with recipe names'
+      $(`#addBtn0`).on("click", function() {
+        dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"));
+        dailyMeal.push(mealName0);
+        console.log(dailyMeal);
+        sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+        $(`#mealList`).empty();
+        for (let i = 0; i < dailyMeal.length; i++) {
+            $(`#mealList`).append($(`<li>${dailyMeal[i]}</li>`))
+        }
+      })
+      $(`#addBtn1`).on("click", function() {
+        dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"));
+        dailyMeal.push(mealName1);
+        console.log(dailyMeal);
+        sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+        $(`#mealList`).empty();
+        for (let i = 0; i < dailyMeal.length; i++) {
+            $(`#mealList`).append($(`<li>${dailyMeal[i]}</li>`))
+        }
+      });
+      $(`#addBtn2`).on("click", function() {
+        dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"));
+        dailyMeal.push(mealName2);
+        console.log(dailyMeal);
+        sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+        $(`#mealList`).empty();
+        for (let i = 0; i < dailyMeal.length; i++) {
+            $(`#mealList`).append($(`<li>${dailyMeal[i]}</li>`))
+        }
+      });
+      $(`#btn-clear`).on("click", function(){
+        dailyMeal = [];
+        sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+        $(`#mealList`).empty();
+
+      })
+    });
+  });
+
+  
+
 });
