@@ -1,4 +1,4 @@
-// Creating an empty array to contain dailyMeal
+// Creating an empty global array to contain dailyMeal and sessionStorage
 var dailyMeal = [];
 sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
 
@@ -80,7 +80,9 @@ $(document).ready(function() {
 
         // Creating an Add button for each card
 
-        var addBtn = $(`<br><button type="button" id="addBtn${[i]}">Save Meal</button>`)
+        var addBtn = $(
+          `<br><button type="button" id="addBtn${[i]}">Save Meal</button>`
+        );
 
         // Pushing the information from the API into the HTML
         $(`#food-name${[i]}`).text(foodName);
@@ -94,51 +96,51 @@ $(document).ready(function() {
         $(`#food-info${[i]}`).append(recipeUrl);
         $(`#food-info${[i]}`).append(addBtn);
 
-        // Creating new variables to contain the card info
-        
         
         // Testing and debugging
         // console.log(foodInfo)
         // console.log(ingredients)
         // console.log(foodImg)
       }
-      var mealName0 = $(`#food-name0`)[0].innerText
-      var mealName1 = $(`#food-name1`)[0].innerText
-      var mealName2 = $(`#food-name2`)[0].innerText
-      
+      // Creating new variables to contain the card info
+      var mealName0 = $(`#food-name0`)[0].innerText;
+      var mealName1 = $(`#food-name1`)[0].innerText;
+      var mealName2 = $(`#food-name2`)[0].innerText;
+
       // Testing and debugging
-      console.log(mealName0)
-      console.log(mealName1)
-      console.log(mealName2)
+      // console.log(mealName0);
+      // console.log(mealName1);
+      // console.log(mealName2);
 
-// Buttons to get dailyMeal from sessionStorage, push the information, and save back into storage with recipe names'
-$(`#addBtn0`).on("click",function(){
-  
-  dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"))
-  dailyMeal.push(mealName0)
-  console.log(dailyMeal)
-  sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
 
-})
-$(`#addBtn1`).on("click",function(){
-  
-  dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"))
-  dailyMeal.push(mealName0)
-  console.log(dailyMeal)
-  sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+      // Buttons to get dailyMeal from sessionStorage, push the information, and save back into storage with recipe names'
+      $(`#addBtn0`).on("click", function() {
+        dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"));
+        dailyMeal.push(mealName0);
+        console.log(dailyMeal);
+        sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+        $(`#mealList`).append($(`<li>${mealName0}</li>`))
+      });
+      $(`#addBtn1`).on("click", function() {
+        dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"));
+        dailyMeal.push(mealName1);
+        console.log(dailyMeal);
+        sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+        $(`#mealList`).append($(`<li>${mealName1}</li>`))
+      });
+      $(`#addBtn2`).on("click", function() {
+        dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"));
+        dailyMeal.push(mealName2);
+        console.log(dailyMeal);
+        sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+        $(`#mealList`).append($(`<li>${mealName2}</li>`))
+      });
+      $(`#btn-clear`).on("click", function(){
+        dailyMeal = [];
+        sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+        $(`#mealList`).empty();
 
-})
-$(`#addBtn2`).on("click",function(){
-
-  dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"))
-  dailyMeal.push(mealName0)
-  console.log(dailyMeal)
-  sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
-
-})
-
+      })
     });
   });
-
-
 });
