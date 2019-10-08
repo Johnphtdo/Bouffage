@@ -1,6 +1,6 @@
 // Creating an empty global array to contain dailyMeal and sessionStorage
 var dailyMeal = [];
-
+sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
 
 $(document).ready(function() {
   $(`#foodBtn`).on("click", function() {
