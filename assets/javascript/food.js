@@ -1,9 +1,16 @@
+// Creating an empty array to contain dailyMeal
+var dailyMeal = [];
+sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+
 $(document).ready(function() {
   $(`#foodBtn`).on("click", function() {
     // Clear information on the click.
     $(`.food-info`).empty();
     // Changing the css of #foodCol to reveal after information has been pushed
     $(`#foodCol`).css("display", "block");
+
+    // Prevent the page from refreshing
+    event.preventDefault();
 
     var foodUrl = "https://api.edamam.com/search";
     var foodAPI = "&app_id=$b64e001c&app_key=$8203f05bcefbb343beaae6139be4661d";
@@ -104,28 +111,29 @@ $(document).ready(function() {
       console.log(mealName1)
       console.log(mealName2)
 
-      // Creating an empty array to contain dailyMeal
-
-      var dailyMeal = [];
 
 $(`#addBtn0`).on("click",function(){
-  
+  dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"))
   dailyMeal.push(mealName0)
+  console.log(dailyMeal)
   sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
 
 })
 $(`#addBtn1`).on("click",function(){
   
-  dailyMeal.push(mealName1)
+  dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"))
+  dailyMeal.push(mealName0)
+  console.log(dailyMeal)
   sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
-
 })
 $(`#addBtn2`).on("click",function(){
 
-  
-  dailyMeal.push(mealName2)
-  sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
 
+  dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"))
+  dailyMeal.push(mealName0)
+  console.log(dailyMeal)
+  sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+  
 })
 
     });
