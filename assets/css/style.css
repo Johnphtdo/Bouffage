@@ -1,6 +1,3 @@
-/* * {
-    border: 1px dotted white;
-} */
 
 body, html {
     height:100%;
@@ -138,4 +135,48 @@ body, html {
 .footerbtnsmedia {
     padding-top: 10px;
     float: right;
+}
+
+.aboutcontainer {
+    margin: 0 auto;
+    width: 1600px;
+    height: 800px;
+    background-color: rgb(255,165,0.8);
+}
+
+.aboutheader{
+    font-family: "Chopin Script";
+    padding: 20px;
+}
+
+.abouttext {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.devcontainer {
+    margin: 0 auto;
+    width: 1300px;
+    height: 800px;
+    background-color: rgb(255,165,0.8);
+}
+
+.devheader {
+    font-family: "Chopin Script";
+    padding: 20px;
+    text-align: center;
+}
+
+.devcontent {
+    margin: 0 auto;
+    display: table;
+    clear: both;
+    padding: 40px;
+    height: 700px;
+
+}
+
+.card {
+    width: 25%;
+    float: left;
 }
