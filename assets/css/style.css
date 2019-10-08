@@ -160,11 +160,11 @@ padding-bottom: 0;
 
 .footer {
     /* background-color: orange; */
-    height: 70px;
-    width: 100%;
-    position: absolute;
-    bottom: 0px;
-}
+    /* height: 70px;
+    width: 100%; */
+    /* position: absolute;
+    bottom: 0px;*/
+} 
 
 .footerbtnspage {
     float: left;
