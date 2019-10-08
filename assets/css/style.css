@@ -1,4 +1,8 @@
 
+/* * {
+    border: 1px solid white;
+} */
+
 body, html {
     height:100%;
     background-color: black;
@@ -6,7 +10,8 @@ body, html {
 }
 
 p {
-    padding: 1em;
+    /* padding: 1em; */
+    margin: 0;
 }
 
 #background {
@@ -46,6 +51,14 @@ padding-bottom: 0;
     
 }
 
+.btn-text {
+    color: black;
+}
+
+.btn-text:hover {
+    text-decoration: none;
+}
+
 .btn-main {
     margin: 0;
     padding: 0;
@@ -58,6 +71,18 @@ padding-bottom: 0;
     border: 2px solid orange;
     font-size: 1.5em;
     margin-top: 2%;
+}
+
+.btn-meals {
+    margin: 0 auto;
+    padding: 0;
+    /* width: 7em;
+    height: 7em; */
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 0.25em;
+    border: 2px solid orange;
+    font-size: 1em;
+    text-align: center;
 }
 
 .btn:hover {
@@ -129,7 +154,6 @@ padding-bottom: 0;
 }
 
 .footer {
-    opacity: 0.6;
     /* background-color: orange; */
     height: 70px;
     width: 100%;
@@ -155,7 +179,7 @@ padding-bottom: 0;
 }
 
 .abouttext {
-
+    font-size: 18px;
     padding-left: 1em;
     padding-bottom: 1em;
 
@@ -186,8 +210,13 @@ padding-bottom: 0;
 }
 
 .card {
+    font-size: 18px;
     width: 25%;
     float: left;
+}
+
+.card-body {
+    padding-top: 0px;
 }
 
 .fab-light{
