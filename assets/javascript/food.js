@@ -1,11 +1,6 @@
-// Creating an empty global array to contain dailyMeal for start of session
+// Creating an empty global array to contain dailyMeal and sessionStorage
 var dailyMeal = [];
-// If still in same session, this should pull from sessionStorage and pass onto the list
 
-dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"));
-for (let i = 0; i < dailyMeal.length; i++) {
-  $(`#mealList`).append($(`<li>${dailyMeal[i]}</li>`));
-}
 
 $(document).ready(function() {
   $(`#foodBtn`).on("click", function() {
@@ -100,6 +95,7 @@ $(document).ready(function() {
         $(`#food-info${[i]}`).append(recipeUrl);
         $(`#food-info${[i]}`).append(addBtn);
 
+        
         // Testing and debugging
         // console.log(foodInfo)
         // console.log(ingredients)
@@ -115,6 +111,7 @@ $(document).ready(function() {
       // console.log(mealName1);
       // console.log(mealName2);
 
+
       // Buttons to get dailyMeal from sessionStorage, push the information, and save back into storage with recipe names'
       $(`#addBtn0`).on("click", function() {
         dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"));
@@ -123,9 +120,9 @@ $(document).ready(function() {
         sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
         $(`#mealList`).empty();
         for (let i = 0; i < dailyMeal.length; i++) {
-          $(`#mealList`).append($(`<li>${dailyMeal[i]}</li>`));
+            $(`#mealList`).append($(`<li>${dailyMeal[i]}</li>`))
         }
-      });
+      })
       $(`#addBtn1`).on("click", function() {
         dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"));
         dailyMeal.push(mealName1);
@@ -133,7 +130,7 @@ $(document).ready(function() {
         sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
         $(`#mealList`).empty();
         for (let i = 0; i < dailyMeal.length; i++) {
-          $(`#mealList`).append($(`<li>${dailyMeal[i]}</li>`));
+            $(`#mealList`).append($(`<li>${dailyMeal[i]}</li>`))
         }
       });
       $(`#addBtn2`).on("click", function() {
@@ -146,13 +143,14 @@ $(document).ready(function() {
             $(`#mealList`).append($(`<li>${dailyMeal[i]}</li>`))
         }
       });
-      $(`#btn-clear`).on("click", function() {
-        sessionStorage.clear()
-        console.log(sessionStorage)
+      $(`#btn-clear`).on("click", function(){
         dailyMeal = [];
         sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
         $(`#mealList`).empty();
-      });
+
+      })
     });
   });
+
+  
 });
