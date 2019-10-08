@@ -10,6 +10,7 @@ $(document).ready(function() {
     var foodItem = $(`#mainIngredient`)
       .val()
       .trim()
+      .replace(/\s/g, "-")
       .toLowerCase();
     var foodTimeFrame = $(`#mealTypes`)
       .val()
@@ -89,7 +90,6 @@ $(document).ready(function() {
         $(`#food-info${[i]}`).append(addBtn);
 
         // Creating new variables to contain the card info
-
         // Testing and debugging
         // console.log(foodInfo)
         // console.log(ingredients)
