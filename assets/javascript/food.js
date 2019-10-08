@@ -111,8 +111,9 @@ $(document).ready(function() {
       console.log(mealName1)
       console.log(mealName2)
 
-
+// Buttons to get dailyMeal from sessionStorage, push the information, and save back into storage with recipe names'
 $(`#addBtn0`).on("click",function(){
+  
   dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"))
   dailyMeal.push(mealName0)
   console.log(dailyMeal)
@@ -125,15 +126,15 @@ $(`#addBtn1`).on("click",function(){
   dailyMeal.push(mealName0)
   console.log(dailyMeal)
   sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+
 })
 $(`#addBtn2`).on("click",function(){
-
 
   dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"))
   dailyMeal.push(mealName0)
   console.log(dailyMeal)
   sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
-  
+
 })
 
     });
