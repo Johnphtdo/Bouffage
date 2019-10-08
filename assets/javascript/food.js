@@ -1,6 +1,7 @@
 // Creating an empty global array to contain dailyMeal for start of session
 var dailyMeal = [];
 // If still in same session, this should pull from sessionStorage and pass onto the list
+
 dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"));
 for (let i = 0; i < dailyMeal.length; i++) {
   $(`#mealList`).append($(`<li>${dailyMeal[i]}</li>`));
@@ -146,6 +147,8 @@ $(document).ready(function() {
         }
       });
       $(`#btn-clear`).on("click", function() {
+        sessionStorage.clear()
+        console.log(sessionStorage)
         dailyMeal = [];
         sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
         $(`#mealList`).empty();
