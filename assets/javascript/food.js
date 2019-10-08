@@ -1,6 +1,11 @@
-// Creating an empty global array to contain dailyMeal and sessionStorage
+// Creating an empty global array to contain dailyMeal for start of session
 var dailyMeal = [];
-sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+// If still in same session, this should pull from sessionStorage and pass onto the list
+
+dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"));
+for (let i = 0; i < dailyMeal.length; i++) {
+  $(`#mealList`).append($(`<li>${dailyMeal[i]}</li>`));
+}
 
 $(document).ready(function() {
   $(`#foodBtn`).on("click", function() {
@@ -12,7 +17,7 @@ $(document).ready(function() {
     // Prevent the page from refreshing
     event.preventDefault();
 
-    var foodUrl = "https://api.edamam.com/search";
+    var foodUrl = "https://api.edamam.com/search?to=25&q=";
     var foodAPI = "&app_id=$b64e001c&app_key=$8203f05bcefbb343beaae6139be4661d";
     var foodItem = $(`#mainIngredient`)
       .val()
@@ -47,7 +52,6 @@ $(document).ready(function() {
 
     var foodQueryUrl =
       foodUrl +
-      "?to=25&q=" +
       foodItem +
       "&mealType=" +
       foodTimeFrame +
@@ -96,7 +100,6 @@ $(document).ready(function() {
         $(`#food-info${[i]}`).append(recipeUrl);
         $(`#food-info${[i]}`).append(addBtn);
 
-        
         // Testing and debugging
         // console.log(foodInfo)
         // console.log(ingredients)
@@ -112,35 +115,44 @@ $(document).ready(function() {
       // console.log(mealName1);
       // console.log(mealName2);
 
-
       // Buttons to get dailyMeal from sessionStorage, push the information, and save back into storage with recipe names'
       $(`#addBtn0`).on("click", function() {
         dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"));
         dailyMeal.push(mealName0);
         console.log(dailyMeal);
         sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
-        $(`#mealList`).append($(`<li>${mealName0}</li>`))
+        $(`#mealList`).empty();
+        for (let i = 0; i < dailyMeal.length; i++) {
+          $(`#mealList`).append($(`<li>${dailyMeal[i]}</li>`));
+        }
       });
       $(`#addBtn1`).on("click", function() {
         dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"));
         dailyMeal.push(mealName1);
         console.log(dailyMeal);
         sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
-        $(`#mealList`).append($(`<li>${mealName1}</li>`))
+        $(`#mealList`).empty();
+        for (let i = 0; i < dailyMeal.length; i++) {
+          $(`#mealList`).append($(`<li>${dailyMeal[i]}</li>`));
+        }
       });
       $(`#addBtn2`).on("click", function() {
         dailyMeal = JSON.parse(sessionStorage.getItem("dailyMeal"));
         dailyMeal.push(mealName2);
         console.log(dailyMeal);
         sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
-        $(`#mealList`).append($(`<li>${mealName2}</li>`))
+        $(`#mealList`).empty();
+        for (let i = 0; i < dailyMeal.length; i++) {
+            $(`#mealList`).append($(`<li>${dailyMeal[i]}</li>`))
+        }
       });
-      $(`#btn-clear`).on("click", function(){
+      $(`#btn-clear`).on("click", function() {
+        sessionStorage.clear()
+        console.log(sessionStorage)
         dailyMeal = [];
         sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
         $(`#mealList`).empty();
-
-      })
+      });
     });
   });
 });
