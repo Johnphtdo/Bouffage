@@ -1,6 +1,6 @@
-* {
+/* * {
     border: 1px dotted white;
-}
+} */
 
 body, html {
     height:100%;
@@ -16,11 +16,11 @@ body, html {
     width: 100%;
     position: fixed;
     background-position: center;
-    overflow: scroll;
+    overflow: auto;
 }
 
 #form-background {
-    background-image: linear-gradient(to right, rgba(255, 163, 0, 0) ,rgba(255, 163, 0));
+    background-image: linear-gradient(to right, rgba(255, 163, 0, 0) ,rgba(255, 163, 0, 0.5));
 }
 
 .header {
@@ -99,7 +99,7 @@ body, html {
     border-width: .3em;
     border-color: lightgray;
     border-radius: 2em;
-    background-color: rgba(255,165,0,0.8);
+    /* background-color: rgba(255,165,0,0.8); */
     padding-bottom: 2em;
     padding-top: 2em;
     padding-left: 2em;
@@ -120,7 +120,7 @@ body, html {
 }
 
 .footer {
-    opacity: 0.9;
+    opacity: 0.6;
     background-color: orange;
     height: 70px;
     width: 100%;
