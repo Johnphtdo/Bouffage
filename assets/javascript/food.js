@@ -1,9 +1,16 @@
+// Creating an empty array to contain dailyMeal
+var dailyMeal = [];
+sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+
 $(document).ready(function() {
   $(`#foodBtn`).on("click", function() {
     // Clear information on the click.
     $(`.food-info`).empty();
     // Changing the css of #foodCol to reveal after information has been pushed
     $(`#foodCol`).css("display", "block");
+
+    // Prevent the page from refreshing
+    event.preventDefault();
 
     var foodUrl = "https://api.edamam.com/search";
     var foodAPI = "&app_id=$b64e001c&app_key=$8203f05bcefbb343beaae6139be4661d";

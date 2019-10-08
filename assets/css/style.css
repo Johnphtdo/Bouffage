@@ -5,6 +5,10 @@ body, html {
 
 }
 
+p {
+    padding: 1em;
+}
+
 #background {
     background-image: url(../images/food_back07.jpg);
     background-size: cover;
@@ -17,12 +21,20 @@ body, html {
 }
 
 #form-background {
-    background-image: linear-gradient(to right, rgba(255, 163, 0, 0) ,rgba(255, 163, 0, 0.5));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) ,rgba(255, 255, 255, 0.35));
 }
 
 .header {
     padding-left: 1em;
     padding-top: 1em;
+    
+}
+
+#header-container {
+
+border-bottom:1px solid orange;
+padding-bottom: 0;
+
 }
 
 .row-index{
@@ -118,7 +130,7 @@ body, html {
 
 .footer {
     opacity: 0.6;
-    background-color: orange;
+    /* background-color: orange; */
     height: 70px;
     width: 100%;
     position: absolute;
@@ -133,50 +145,52 @@ body, html {
 }
 
 .footerbtnsmedia {
-    padding-top: 10px;
+    padding-top: 1em;
     float: right;
-}
-
-.aboutcontainer {
-    margin: 0 auto;
-    width: 1600px;
-    height: 800px;
-    background-color: rgb(255,165,0.8);
 }
 
 .aboutheader{
     font-family: "Chopin Script";
-    padding: 20px;
+    padding: 1em;
 }
 
 .abouttext {
-    padding-left: 20px;
-    padding-bottom: 20px;
+
+    padding-left: 1em;
+    padding-bottom: 1em;
+
 }
 
-.devcontainer {
+.devcontainer, .aboutcontainer {
     margin: 0 auto;
-    width: 1300px;
-    height: 800px;
-    background-color: rgb(255,165,0.8);
+    width: 75%;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 2em;
+    border: 1px solid orange;
 }
 
 .devheader {
     font-family: "Chopin Script";
-    padding: 20px;
+    padding: 1em;
     text-align: center;
 }
 
 .devcontent {
+    text-align: center;
     margin: 0 auto;
     display: table;
     clear: both;
-    padding: 40px;
-    height: 700px;
+    padding: 3em;
+    /* height: 700px; */
 
 }
 
 .card {
     width: 25%;
     float: left;
+}
+
+.fab-light{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 3em;
 }
