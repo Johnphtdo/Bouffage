@@ -10,6 +10,7 @@ $(document).ready(function() {
     var foodItem = $(`#mainIngredient`)
       .val()
       .trim()
+      .replace(/\s/g, "-")
       .toLowerCase();
     var foodTimeFrame = $(`#mealTypes`)
       .val()
@@ -86,22 +87,47 @@ $(document).ready(function() {
         $(`#food-info${[i]}`).append(recipeUrl);
         $(`#food-info${[i]}`).append(addBtn);
 
-    // Creating new variables to contain the card info
-    
-    
-    // Testing and debugging
-    // console.log(foodInfo)
-    // console.log(ingredients)
-    // console.log(foodImg)
-  }
-  var cardInfo0 = $(`#food-card0`)
-  var cardInfo1 = $(`#food-card1`)
-  var cardInfo2 = $(`#food-card2`)
+        // Creating new variables to contain the card info
+        
+        
+        // Testing and debugging
+        // console.log(foodInfo)
+        // console.log(ingredients)
+        // console.log(foodImg)
+      }
+      var mealName0 = $(`#food-name0`)[0].innerText
+      var mealName1 = $(`#food-name1`)[0].innerText
+      var mealName2 = $(`#food-name2`)[0].innerText
+      
+      // Testing and debugging
+      console.log(mealName0)
+      console.log(mealName1)
+      console.log(mealName2)
 
-  // Testing and debugging
-      console.log(cardInfo0)
-      console.log(cardInfo1)
-      console.log(cardInfo2)
+      // Creating an empty array to contain dailyMeal
+
+      var dailyMeal = [];
+
+$(`#addBtn0`).on("click",function(){
+  
+  dailyMeal.push(mealName0)
+  sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+
+})
+$(`#addBtn1`).on("click",function(){
+  
+  dailyMeal.push(mealName1)
+  sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+
+})
+$(`#addBtn2`).on("click",function(){
+
+  
+  dailyMeal.push(mealName2)
+  sessionStorage.setItem("dailyMeal", JSON.stringify(dailyMeal));
+
+})
+
     });
   });
 
