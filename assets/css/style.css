@@ -5,6 +5,10 @@ body, html {
 
 }
 
+p {
+    padding: 1em;
+}
+
 #background {
     background-image: url(../images/food_back07.jpg);
     background-size: cover;
@@ -126,7 +130,7 @@ padding-bottom: 0;
 
 .footer {
     opacity: 0.6;
-    background-color: orange;
+    /* background-color: orange; */
     height: 70px;
     width: 100%;
     position: absolute;
@@ -141,37 +145,32 @@ padding-bottom: 0;
 }
 
 .footerbtnsmedia {
-    padding-top: 10px;
+    padding-top: 1em;
     float: right;
-}
-
-.aboutcontainer {
-    margin: 0 auto;
-    width: 1600px;
-    height: 800px;
-    background-color: rgb(255,165,0.8);
 }
 
 .aboutheader{
     font-family: "Chopin Script";
-    padding: 20px;
+    padding: 1em;
 }
 
 .abouttext {
-    padding-left: 20px;
-    padding-bottom: 20px;
+    padding-left: 1em;
+    padding-bottom: 1em;
 }
 
-.devcontainer {
+.devcontainer, .aboutcontainer {
     margin: 0 auto;
-    width: 1300px;
-    height: 800px;
-    background-color: rgb(255,165,0.8);
+    width: 75%;
+    /* height: 800px; */
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 2em;
+    border: 1px solid orange;
 }
 
 .devheader {
     font-family: "Chopin Script";
-    padding: 20px;
+    padding: 1em;
     text-align: center;
 }
 
@@ -179,12 +178,17 @@ padding-bottom: 0;
     margin: 0 auto;
     display: table;
     clear: both;
-    padding: 40px;
-    height: 700px;
+    padding: 3em;
+    /* height: 700px; */
 
 }
 
 .card {
     width: 25%;
     float: left;
+}
+
+.fab-light{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 3em;
 }
