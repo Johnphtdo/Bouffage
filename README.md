@@ -6,3 +6,5 @@ This project allows users to create a daily meal plan based on the type of ingre
 API's Used| 
 https://www.edamam.com/
 https://www.thecocktaildb.com
+
+Live version can be found at https://johnphtdo.github.io/Bouffage/
